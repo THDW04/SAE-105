@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de musique | SAE 105</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pathway+Gothic+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <p><a href="#" class="logo">HueWys</a></p>
+        <nav>
+            <ul>
+                <li><a href="#musiqueListe">Musiques</a></li>
+                <li><a href="#Formulaire" id="form">Formulaire</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <main>
+
+        <section class="bienvenue"> 
+                <h1>BIENVENUE</h1>
+
+                <p> Ici, je partage avec vous les musiques que j'adore. Des morceaux qui m’accompagnent au quotidien, des découvertes surprenantes et des classiques que j’écoute en boucle. <br> Si vous aimez la musique autant que moi, vous êtes au bon endroit ! Prenez le temps de découvrir mes playlists, et j’espère que vous trouverez ici des sons qui vous plaisent aussi. <strong><em>Bonne écoute !</em></strong></p>
+
+                <div class="video-background">
+                    <video autoplay loop muted>
+                        <source src="Images/2022395-hd_1920_1080_30fps.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la vidéo.
+                    </video>
+                </div>
+        </section>
+
+        <section class="container" id="musiqueListe">
+            <h2>Mes Pépites Musicales</h2>
+            <div class="wrapper ">
+                <audio controls id="audio-0">
+                    <source src="Musiques/In_my_bag.mp3" type="audio/mp3">
+                    Votre navigateur ne supporte pas la balise audio.
+                </audio>
+                <audio controls id="audio-1">
+                    <source src="Musiques/Igual_que_un_Angel.mp3" type="audio/mp3">
+                    Votre navigateur ne supporte pas la balise audio.
+                </audio>
+                <audio controls id="audio-2">
+                    <source src="Musiques/monsieur-nov-dernier-je-taime-ft-josman.mp3" type="audio/mp3">
+                    Votre navigateur ne supporte pas la balise audio.
+                </audio>
+                <audio controls id="audio-3">
+                    <source src="Musiques/ART.mp3" type="audio/mp3">
+                    Votre navigateur ne supporte pas la balise audio.
+                </audio>
+                <audio controls id="audio-4">
+                    <source src="Musiques/Soh-soh.mp3" type="audio/mp3">
+                    Votre navigateur ne supporte pas la balise audio.
+                </audio>
+            </div>
+        </section>
+        
+        <section class="formulaire" id="Formulaire">
+
+            <div>
+                <h2>Proposez-moi une chanson ou un album que vous aimez particulièrement !</h2>
+                
+                <form action="">
+                    <label for="titre">1. Titre de la musique ou de l'album</label><br>
+                    <input type="text" name="titre" id="titre" required placeholder="ex: Sticky">
+                    <br>
+
+                    <label for="artiste">2. Le nom de l'artiste</label><br>
+                    <input type="text" name="artiste" id="artiste" required placeholder="ex :Tyler, The Creator">
+                    <br>
+
+                    <label for="lien">3. L'URL de l'extrait audio (15 secondes max)</label><br>
+                    <input type="url" name="lien" id="lien" required placeholder="ex: https://google.com">
+                    <br>
+
+                    <label for="descriptionChoix">4. Pourquoi avez-vous choisi cette chanson ?</label><br>
+                    <textarea name="description" id="descriptionChoix" cols="50" rows="10" placeholder="Ecrivez ici" required></textarea><br>
+
+                    <input type="button" value="Prévisualiser" id="previewBtn" class="button">
+
+                    <input type="submit" value="Envoyer" id="envoyer" class="button">
+                </form>
+                <p id="Réponse"></p>
+            </div>
+        </section>
+
+        <div class="preview"></div>
+    </main>
+
+    <div id="creditsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h4>Crédits</h4>
+            <p>Les musiques diffusées sur ce site sont protégées par les droits d’auteur.</p>
+            <p>Pour chaque images, les crédits des artistes sont mentionnés dans la section correspondante.</p>
+            <h5>Musiques :</h5>
+            <ul>
+                <li>In my bag - FLO ft Glorilla</li>
+                <li>Igual que un angel - Kali Uchis ft</li>
+                <li>Dernier, je t'aime - Josman ft Monsieur Nov</li>
+                <li>ART - Tyla</li>
+                <li>Soh-soh - Odeal</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p><a href="#">Retouner en haut de page</a></p>
+        <p class="credits">Crédits</p>
+        <p>Nathalia VILASSE - MMI1 - 2024/2025</p>
+    </footer>
+ 
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
